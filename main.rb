@@ -142,7 +142,22 @@ end
 
 song()
 
+# write a function that takes an array of names and returns a whole string of these names with comma and the word 'and' before the last name;
+# ["John", "George", "James", "Anna"] ---> "John, George, James, and Anna";
 
+def str(array)
+    temp = ''
+	for i in 0..array.length-1
+		if i == array.length-1
+			temp += "and #{array[i]}"
+		else	
+			temp += "#{array[i]}, "
+		end
+	end
+	puts temp
+end			
+
+str(["John", "George", "James", "Anna"])
 
 
 
